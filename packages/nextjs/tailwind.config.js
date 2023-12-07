@@ -8,7 +8,7 @@ module.exports = {
     themes: [
       {
         scaffoldEth: {
-          primary: "#93BBFB",
+          primary: "#040407",
           "primary-content": "#212638",
           secondary: "#DAE8FF",
           "secondary-content": "#212638",
@@ -40,17 +40,17 @@ module.exports = {
       },
       {
         scaffoldEthDark: {
-          primary: "#212638",
-          "primary-content": "#F9FBFF",
+          primary: "#EDF2F7",
+          "primary-content": "#040407",
           secondary: "#323f61",
           "secondary-content": "#F9FBFF",
-          accent: "#4969A6",
-          "accent-content": "#F9FBFF",
+          accent: "#e0b400",
+          "accent-content": "#EDF2F7",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
           "base-100": "#385183",
           "base-200": "#2A3655",
-          "base-300": "#212638",
+          "base-300": "#040407",
           "base-content": "#F9FBFF",
           info: "#385183",
           success: "#34EEB6",
@@ -75,6 +75,10 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        cubano: ["cubano", "sans-serif"],
+        gothic: ["didact gothic", "sans-serif"],
+      },
       boxShadow: {
         center: "0 0 12px -2px rgb(0 0 0 / 0.05)",
       },
