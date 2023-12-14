@@ -54,15 +54,20 @@ export const Header = () => {
             })}
           </ul>
         </div>
-
-        <MpLogo width={35} height={35} className="w-10 h-10 hidden lg:flex" />
+        <Link href="/" passHref>
+          <MpLogo width={35} height={35} className="w-10 h-10 hidden lg:flex hover:text-accent" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {menuLinks.map(({ label, href }) => {
             return (
               <li key={href}>
-                <Link href={href} passHref className={`font-cubano text-2xl`}>
+                <Link
+                  href={href}
+                  passHref
+                  className={`font-cubano text-2xl hover:text-accent rounded-md hover:bg-base-300`}
+                >
                   {label}
                 </Link>
               </li>

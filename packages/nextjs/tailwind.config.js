@@ -12,7 +12,7 @@ module.exports = {
           "primary-content": "#EDF2F7",
           secondary: "#DAE8FF",
           "secondary-content": "#212638",
-          accent: "#93BBFB",
+          accent: "#ec4899",
           "accent-content": "#212638",
           neutral: "#212638",
           "neutral-content": "#ffffff",
@@ -44,12 +44,12 @@ module.exports = {
           "primary-content": "#040407",
           secondary: "#323f61",
           "secondary-content": "#F9FBFF",
-          accent: "#e0b400",
+          accent: "#ec4899",
           "accent-content": "#EDF2F7",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "#385183",
-          "base-200": "#2A3655",
+          "base-100": "green",
+          "base-200": "red",
           "base-300": "#040407",
           "base-content": "#F9FBFF",
           info: "#385183",
@@ -76,8 +76,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: ["didact gothic", "sans-serif"], // default if no font explicitly specified
         cubano: ["cubano", "sans-serif"],
         gothic: ["didact gothic", "sans-serif"],
+        inter: ["inter", "sans-serif"],
+      },
+      colors: {
+        "base-100": "#FFFFFF0A",
+        "base-200": "#FFFFFF0F",
       },
       boxShadow: {
         center: "0 0 12px -2px rgb(0 0 0 / 0.05)",

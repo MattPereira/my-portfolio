@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { socials } from "~~/utils/portfolio/socials";
+import { socials } from "../Socials";
 
 export function Landing() {
   return (
