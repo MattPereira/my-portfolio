@@ -59,7 +59,7 @@ export const Header = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 flex gap-2">
+        <ul className="flex gap-6 py-4">
           {menuLinks.map(({ label, href }) => {
             return (
               <li key={href}>

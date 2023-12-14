@@ -15,7 +15,7 @@ export function Landing() {
             Matt Pereira
           </h1>
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-cubano mb-3 text-center lg:text-start text-base-content">
-            Web Developer
+            Software Engineer
           </h2>
           <div className="flex justify-center lg:justify-start">
             {socials.map(({ url, icon, id }) => (

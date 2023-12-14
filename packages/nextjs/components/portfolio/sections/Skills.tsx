@@ -67,7 +67,7 @@ export function Skills() {
         {skills.map(({ category, items }) => (
           <div key={category} className="mb-5 text-start ">
             <div>
-              <h5 className="text-4xl font-inter font-bold mb-10">{category}</h5>
+              <h5 className="text-3xl font-inter font-bold mb-10">{category}</h5>
               <ul className="text-2xl">
                 {items.map(item => (
                   <li key={item.title} className="text-gothic flex gap-4 mb-6 items-center">
