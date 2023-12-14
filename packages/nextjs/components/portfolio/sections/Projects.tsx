@@ -102,14 +102,14 @@ export function Projects() {
 function ProjectCard({ project }: { project: IProject }) {
   return (
     <div key={project.title} className="border border-base-content rounded-xl flex flex-col">
-      <div className="mb-5">
-        <div className="w-full h-60 lg:h-72 overflow-hidden rounded-2xl">
+      <div className="">
+        <div className="w-full h-60 lg:h-72 overflow-hidden rounded-xl">
           <Image width={2000} height={1000} src={project.imageSrc} alt={project.title} />
         </div>
       </div>
 
       <div className="grow flex flex-col p-5">
-        <h5 className="text-3xl font-inter font-bold mb-3">{project.title}</h5>
+        <h5 className="text-2xl font-inter font-bold">{project.title}</h5>
 
         <div className="grow">
           <p className="font-gothic text-xl">{project.description}</p>
