@@ -20,9 +20,9 @@ const experiences = [
     image: "/hfla.png",
     description: (
       <>
-        Hack for LA brings together civic-minded volunteers to build digital products, programs and services with
-        community partners and local government to address issues in our LA region and to share these effective
-        processes, practices, and code with the larger civic tech community.
+        Volunteered as a software engineer contributing to open source projects including Civic Tech Jobs and the
+        Volunteer Relationship Management System. Collaborated with other developers, designers, and project managers to
+        serve the greater Los Angeles community.
       </>
     ),
   },
@@ -31,8 +31,13 @@ const experiences = [
     id: 3,
     title: "Peer Mentor",
     image: "/springboard.png",
-    description:
-      "After earning my certification from Springboard's full stack software engineering bootcamp, I volunteered as a peer mentor helping students overcome obstacles and achieve their goals.",
+    description: (
+      <>
+        After earning a full stack software engineering bootcamp certification from Springboard, I volunteered as a peer
+        mentor helping students overcome obstacles and learn the fundamentals of web development. Additionally, I helped
+        facilitate technical interview practice sessions.
+      </>
+    ),
   },
 ];
 
