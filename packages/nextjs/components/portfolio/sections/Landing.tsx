@@ -7,7 +7,7 @@ export function Landing() {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-6">
         <div className="mb-5">
           <div className="w-72 h-72 xl:w-96 xl:h-96 rounded-full overflow-hidden ">
-            <Image src="/pfp.png" width={500} height={500} alt="Picture of Matt Pereira" />
+            <Image src="/bufficorn.jpg" width={500} height={500} alt="Picture of Matt Pereira" />
           </div>
         </div>
         <div>
