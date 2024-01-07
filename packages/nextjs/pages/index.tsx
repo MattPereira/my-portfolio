@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
-import { About, Experience, Landing, Projects, Skills } from "~~/components/portfolio/sections";
+import { About, Achievements, Experience, Landing, Projects, Skills } from "~~/components/portfolio/sections";
 
 // export const getServerSideProps = async () => {
 //   const nftResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-nfts`);
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <About />
       <Projects />
       <Experience />
-      {/* <Achievements nfts={nfts} /> */}
+      <Achievements />
       <Skills />
     </>
   );
