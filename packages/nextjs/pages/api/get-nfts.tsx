@@ -1,26 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Base URL
-  const baseUrl = `https://arb-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner`;
+  try {
+    const address = "0x41f727fA294E50400aC27317832A9F78659476B9";
+    // Base URL
+    const url = `https://arb-mainnet.g.alchemy.com/nft/v2/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&withMetadata=true&pageSize=100`;
 
-  // Create a URL object
-  const url = new URL(baseUrl);
+    // Fetch data
+    const response = await fetch(url);
 
-  // Add query parameters
-  url.searchParams.append("owner", "0x41f727fA294E50400aC27317832A9F78659476B9");
-  url.searchParams.append("withMetadata", "true");
-  url.searchParams.append("pageSize", "100");
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error(`API responded with status code ${response.status}`);
+    }
 
-  // Fetch data
-  const response = await fetch(url.toString());
-  const data = await response.json();
+    const data = await response.json();
 
-  const nftsData = data.ownedNfts.map((nft: any) => ({
-    image: nft.image.originalUrl,
-    description: nft.description,
-    name: nft.name,
-  }));
+    // Process the data
+    const nfts = data.ownedNfts.map((nft: any) => ({
+      image: nft.image?.originalUrl,
+      description: nft.description,
+      name: nft.name,
+    }));
 
-  res.status(200).json({ data: nftsData });
+    res.status(200).json({ data: nfts });
+  } catch (error) {
+    // Log the error for server-side debugging
+    console.error("Failed to fetch NFT data:", error);
+
+    // Send a generic error response to the client
+    res.status(500).json({ error: "Failed to fetch NFT data" });
+  }
 }

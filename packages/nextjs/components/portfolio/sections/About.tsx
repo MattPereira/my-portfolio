@@ -14,27 +14,19 @@ export function About() {
             After graduating, I stuck around as a peer mentor helping students learn the fundamentals of web
             development. I also joined <Link href="https://www.hackforla.org/" text="Hack for LA" /> as a volunteer
             software engineer contributing to open source projects including{" "}
-            <a
-              className="text-accent font-semibold underline"
-              href="https://www.hackforla.org/projects/civic-tech-jobs"
-            >
-              Civic Tech Jobs
-            </a>
-            , where I learned to collaborate with other developers, designers, and project managers.
+            <Link text="Civic Tech Jobs" href="https://www.hackforla.org/projects/civic-tech-jobs" />, where I learned
+            to collaborate with other developers, designers, and project managers.
           </p>
         </div>
         <div className="flex-1 mb-5">
           <h5 className="text-3xl font-inter font-bold mb-2">Present</h5>
           <p>
-            I recently joined the{" "}
-            <a className="text-accent font-semibold underline" href="https://buidlguidl.com/">
-              Buidl Guidl
-            </a>{" "}
-            community where we create products, prototypes, and tutorials to enrich the web3 ecosystem. My first
-            creation was <Link text="Speedrun Chainlink" href="https://speedrun-chainlink.vercel.app/" />, a
-            beginner&apos;s guide to implimenting Chainlink products with smart contracts. Building on top of what I
-            learned, I then shipped <Link text="Vaults of Fortune" href="https://vaults-of-fortune.vercel.app/" />.
-            After presenting my projects to the community, I was fortunate enough to earn a stream with the{" "}
+            I recently joined the <Link text="Buidl Guidl" href="https://buidlguidl.com/" /> community where we create
+            products, prototypes, and tutorials to enrich the web3 ecosystem. My first creation was{" "}
+            <Link text="Speedrun Chainlink" href="https://speedrun-chainlink.vercel.app/" />, a beginner&apos;s guide to
+            implimenting Chainlink products with smart contracts. Building on top of what I learned, I then shipped{" "}
+            <Link text="Vaults of Fortune" href="https://vaults-of-fortune.vercel.app/" />. After presenting my projects
+            to the community, I was fortunate enough to earn a stream with the{" "}
             <Link text="Sanctum Cohort" href="https://sanctum.buidlguidl.com/" />
           </p>
         </div>
