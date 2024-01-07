@@ -17,7 +17,7 @@ module.exports = {
           neutral: "#212638",
           "neutral-content": "#ffffff",
           "base-100": "#ffffff",
-          "base-200": "#f4f8ff",
+          "base-200": "#ffffff",
           "base-300": "#EDF2F7",
           "base-content": "#212638",
           info: "#93BBFB",
@@ -48,8 +48,8 @@ module.exports = {
           "accent-content": "#EDF2F7",
           neutral: "#F9FBFF",
           "neutral-content": "#385183",
-          "base-100": "green",
-          "base-200": "red",
+          "base-100": "#1f1f1f",
+          "base-200": "#1c1c1d",
           "base-300": "#040407",
           "base-content": "#F9FBFF",
           info: "#385183",
@@ -81,10 +81,11 @@ module.exports = {
         gothic: ["didact gothic", "sans-serif"],
         inter: ["inter", "sans-serif"],
       },
-      colors: {
-        "base-100": "#FFFFFF0A",
-        "base-200": "#FFFFFF0F",
-      },
+      // Transparency colors only good for dark mode
+      // colors: {
+      //   "base-100": "#FFFFFF0A",
+      //   "base-200": "#FFFFFF0F",
+      // },
       boxShadow: {
         center: "0 0 12px -2px rgb(0 0 0 / 0.05)",
       },

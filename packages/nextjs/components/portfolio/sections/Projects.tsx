@@ -53,7 +53,6 @@ export function Projects() {
     if (profileData && profileData.builds) {
       fetchBuildsData(profileData.builds)
         .then(responses => {
-          console.log("responses", responses);
           const formattedBuildsData = responses.map(response => {
             const { branch, demoUrl, desc, image, name } = response;
             return {
@@ -74,15 +73,13 @@ export function Projects() {
 
   if (profileError) return <div>Failed to load</div>;
   if (!profileData) return <div>Loading...</div>;
-
-  console.log("profileData", profileData);
   return (
     <SectionContainer>
       <SectionHeader title="Projects" />
 
       <h5 className="font-inter font-bold text-4xl mb-5">Web3</h5>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 mb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 mb-10">
         {builds.map(project => (
           <ProjectCard key={project.title} project={project} />
         ))}
@@ -101,14 +98,14 @@ export function Projects() {
 
 function ProjectCard({ project }: { project: IProject }) {
   return (
-    <div key={project.title} className="border border-base-content rounded-xl flex flex-col">
+    <div key={project.title} className="border border-base-content rounded-xl flex flex-col bg-base-200">
       <div className="">
-        <div className="w-full h-60 lg:h-72 overflow-hidden rounded-xl">
+        <div className="w-full h-60 lg:h-64 overflow-hidden rounded-xl border-base-content border-b">
           <Image width={2000} height={1000} src={project.imageSrc} alt={project.title} />
         </div>
       </div>
 
-      <div className="grow flex flex-col p-5">
+      <div className="grow flex flex-col p-5 ">
         <h5 className="text-2xl font-inter font-bold">{project.title}</h5>
 
         <div className="grow">
@@ -119,7 +116,7 @@ function ProjectCard({ project }: { project: IProject }) {
             href={project.urls.demo}
             target="_blank"
             rel="noreferrer"
-            className={`btn btn-primary  w-full text-xl font-inter font-bold capitalize rounded-lg`}
+            className={`btn btn-primary btn-outline  w-full text-xl font-inter font-bold capitalize rounded-lg`}
           >
             Demo
           </a>
@@ -127,7 +124,7 @@ function ProjectCard({ project }: { project: IProject }) {
             href={project.urls.code}
             target="_blank"
             rel="noreferrer"
-            className={`btn btn-primary  w-full text-xl font-inter font-bold capitalize rounded-lg`}
+            className={`btn btn-primary btn-outline w-full text-xl font-inter font-bold capitalize rounded-lg`}
           >
             Code
           </a>

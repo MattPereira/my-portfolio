@@ -48,12 +48,14 @@ export function Experience() {
 
       <div className="flex flex-col xl:flex-row lg:space-x-8">
         {experiences.map(exp => (
-          <div key={exp.id} className="flex-1 mb-5">
-            <div className="bg-white p-10 h-36 flex items-center justify-center rounded-2xl mb-5 overflow-hidden">
+          <div key={exp.id} className="flex-1 mb-5 border border-base-content rounded-xl bg-base-200">
+            <div className="bg-white border-base-content border-b p-10 h-48 flex items-center justify-center rounded-xl mb-5 overflow-hidden">
               <Image width={300} height={200} src={exp.image} alt={exp.title} />
             </div>
-            <h5 className="text-3xl font-inter font-bold mb-2">{exp.title}</h5>
-            <p className="text-xl">{exp.description}</p>
+            <div className="p-3">
+              <h5 className="text-2xl font-inter font-bold mb-2">{exp.title}</h5>
+              <p className="text-xl">{exp.description}</p>
+            </div>
           </div>
         ))}
       </div>

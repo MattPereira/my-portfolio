@@ -3,7 +3,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["storage.googleapis.com"],
+    domains: ["storage.googleapis.com", "ipfs.io"],
   },
   reactStrictMode: true,
   typescript: {
