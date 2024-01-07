@@ -8,9 +8,9 @@ const experiences = [
     image: "/buidlguidl.svg",
     description: (
       <>
-        Built decentralized applications with Scaffold ETH including Speedrun Chainlink, Vaults of Fortune, and upDev.
-        Currently, a member of the Sanctum Cohort stream working on building Defi Challenges teach developers how to
-        integrate with protocols including Sommolier, Yearn, and Chainlink.
+        Building decentralized applications with Scaffold ETH including Speedrun Chainlink, Vaults of Fortune, and
+        upDev. Currently, a member of the Sanctum Cohort stream working on building Defi Challenges teach developers how
+        to integrate with protocols including Sommolier, Yearn, and Chainlink.
       </>
     ),
   },
@@ -49,10 +49,10 @@ export function Experience() {
       <div className="flex flex-col xl:flex-row lg:space-x-8">
         {experiences.map(exp => (
           <div key={exp.id} className="flex-1 mb-5 border border-base-content rounded-xl bg-base-200">
-            <div className="bg-white border-base-content border-b p-10 h-48 flex items-center justify-center rounded-xl mb-5 overflow-hidden">
+            <div className="bg-white border-base-content border-b p-10 h-48 flex items-center justify-center rounded-xl overflow-hidden">
               <Image width={300} height={200} src={exp.image} alt={exp.title} />
             </div>
-            <div className="p-3">
+            <div className="p-5">
               <h5 className="text-2xl font-inter font-bold mb-2">{exp.title}</h5>
               <p className="text-xl">{exp.description}</p>
             </div>

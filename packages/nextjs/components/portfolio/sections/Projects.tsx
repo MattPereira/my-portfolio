@@ -87,7 +87,7 @@ export function Projects() {
 
       <h5 className="font-inter font-bold text-4xl mb-5">Web2</h5>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
         {web2Projects.map(project => (
           <ProjectCard key={project.title} project={project} />
         ))}

@@ -13,7 +13,7 @@ export const menuLinks: HeaderMenuLink[] = [
   { label: "About", href: "/#About" },
   { label: "Projects", href: "/#Projects" },
   { label: "Experience", href: "/#Experience" },
-  { label: "Achievements", href: "/#Acheivements" },
+  { label: "Achievements", href: "/#Achievements" },
   { label: "Skills", href: "/#Skills" },
   {
     label: "Resume",
