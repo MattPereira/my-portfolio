@@ -4,9 +4,9 @@ import { About, Achievements, Experience, Landing, Projects, Skills } from "~~/c
 
 export const getServerSideProps = async () => {
   const nftResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-nfts`);
-  console.log("nftResponse", nftResponse);
+  // console.log("nftResponse", nftResponse);
   const nfts = await nftResponse.json();
-  console.log("nfts", nfts);
+  // console.log("nfts", nfts);
   return { props: { nfts: nfts.data } };
 };
 

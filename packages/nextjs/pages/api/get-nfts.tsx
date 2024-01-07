@@ -4,7 +4,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const address = "0x41f727fA294E50400aC27317832A9F78659476B9";
     // Base URL
-    const url = `https://arb-mainnet.g.alchemy.com/nft/v2/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&withMetadata=true&pageSize=100`;
+    const url = `https://arb-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&withMetadata=true&pageSize=100`;
 
     // Fetch data
     const response = await fetch(url);
@@ -15,6 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const data = await response.json();
+    console.log("data", data.ownedNfts[0]);
 
     // Process the data
     const nfts = data.ownedNfts.map((nft: any) => ({

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SectionContainer, SectionHeader } from "~~/components/portfolio";
 
 export function Achievements({ nfts }: any) {
+  // console.log("nft data", nfts);
   return (
     <SectionContainer>
       <SectionHeader title="Achievements" />
