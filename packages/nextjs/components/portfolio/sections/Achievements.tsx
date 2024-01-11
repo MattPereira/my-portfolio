@@ -20,8 +20,10 @@ export function Achievements() {
     <SectionContainer>
       <SectionHeader title="Achievements" />
       {isLoading ? (
-        <div>
-          <div className="text-center">Fetching NFT acheivements...</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          {Array.from(Array(10).keys()).map((_, idx) => (
+            <div key={idx} className="skeleton animate-pulse bg-base-100 rounded-xl w-full h-72"></div>
+          ))}
         </div>
       ) : error ? (
         <div className="text-center">Error loading achievement NFTs</div>
