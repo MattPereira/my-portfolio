@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps<{ wallets: WalletsData }> = 
   const balanceMaps: Map<string, string>[] = [];
 
   for (const network of networks) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-balances?network=${network}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/get-balances?network=${network}`);
     const balances = await res.json();
     balanceMaps.push(new Map(balances.map((wallet: any) => [wallet.name, wallet.balance])));
   }

@@ -5,7 +5,7 @@ import { SectionContainer, SectionHeader } from "~~/components/portfolio";
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export function Achievements() {
-  const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-nfts`, fetcher);
+  const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/get-nfts`, fetcher);
 
   // if (error) {
   //   console.error("nftsError", error);
