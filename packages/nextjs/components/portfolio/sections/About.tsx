@@ -24,18 +24,20 @@ export function About() {
             I recently joined the <Link text="Buidl Guidl" href="https://buidlguidl.com/" /> community where we create
             products, prototypes, and tutorials to enrich the web3 ecosystem. My first creation was{" "}
             <Link text="Speedrun Chainlink" href="https://speedrun-chainlink.vercel.app/" />, a beginner&apos;s guide to
-            implimenting Chainlink products with smart contracts. Building on top of what I learned, I then shipped{" "}
-            <Link text="Vaults of Fortune" href="https://vaults-of-fortune.vercel.app/" />. After presenting my projects
-            to the community, I was fortunate enough to earn a stream with the{" "}
-            <Link text="Sanctum Cohort" href="https://sanctum.buidlguidl.com/" />
+            implimenting Chainlink products with smart contracts. Next, I shipped{" "}
+            <Link text="Vaults of Fortune" href="https://vaults-of-fortune.vercel.app/" />, a contest where players
+            compete for the highest ROI by depositing ERC-20 tokens into ERC-4626 vaults. Furthermore, I was part of a
+            hackathon team that built <Link text="upDev" href="https://updev-v1.vercel.app/" />, a universal profile for
+            developers built with LUKSO.
           </p>
         </div>
         <div className="flex-1 mb-5">
           <h5 className="text-3xl font-inter font-bold mb-2">Future</h5>
           <p>
-            I am starting to compete in hackathons learning to collaborate in fast paced environments. My first
-            hackathon entry was <Link text="upDev" href="https://updev-v1.vercel.app/" />, a universal profile for
-            developers built with LUKSO . Additionally, I am starting to work on the offical{" "}
+            I am very fortunate that my efforts continue to be rewarded with a stream from BuidlGuidl&apos;s{" "}
+            <Link text="Sanctum Cohort" href="https://sanctum.buidlguidl.com/" />. I plan to continue competing in
+            hackathons and am very excited to attend my first ETH Denver this year! Additionally, I am working on the
+            offical{" "}
             <Link
               href="https://github.com/scaffold-eth/Scaffold-ETH-DeFi-Challenges"
               text="Scaffold Eth Defi Challenges"
