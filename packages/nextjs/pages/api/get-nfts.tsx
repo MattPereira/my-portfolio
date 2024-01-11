@@ -4,7 +4,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const address = "0x41f727fA294E50400aC27317832A9F78659476B9";
     // Base URL
-    const url = `https://arb-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&withMetadata=true&pageSize=100`;
+    const url = `https://arb-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY_API_KEY}/getNFTsForOwner?owner=${address}&withMetadata=true`;
 
     // Fetch data
     const response = await fetch(url);
@@ -16,15 +16,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const data = await response.json();
     console.log("data", data.ownedNfts[0]);
+    const nfts = data.ownedNfts;
 
+    // MAY BE CAUSING ERROR WITH SERVERLESS FUNCTION DEPLOYED TO VERCEL
     // Process the data
-    const nfts = data.ownedNfts.map((nft: any) => ({
-      image: nft.image?.originalUrl,
-      description: nft.description,
-      name: nft.name,
-    }));
+    // const nfts = data.ownedNfts.map((nft: any) => ({
+    //   image: nft.image?.originalUrl,
+    //   description: nft.description,
+    //   name: nft.name,
+    // }));
 
-    res.status(200).json({ data: nfts });
+    res.status(200).json(nfts);
   } catch (error) {
     // Log the error for server-side debugging
     console.error("Failed to fetch NFT data:", error);

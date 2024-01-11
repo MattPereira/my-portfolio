@@ -7,15 +7,14 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 export function Achievements() {
   const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/get-nfts`, fetcher);
 
-  // if (error) {
-  //   console.error("nftsError", error);
-  //   return (
-  //     <SectionContainer>
-  //       <SectionHeader title="Achievements" />
-  //       <div className="text-center">Error loading achievement NFTs</div>
-  //     </SectionContainer>
-  //   );
-  // }
+  // Process the data only if it's available
+  const nfts = data
+    ? data.map((nft: any) => ({
+        image: nft.image?.originalUrl,
+        description: nft.description,
+        name: nft.name,
+      }))
+    : [];
 
   return (
     <SectionContainer>
@@ -28,7 +27,7 @@ export function Achievements() {
         <div className="text-center">Error loading achievement NFTs</div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 rounded-xl">
-          {data.data.map((nft: any, idx: number) => (
+          {nfts.map((nft: any, idx: number) => (
             <div
               key={idx}
               className="flex flex-col items-center justify-center border border-base-content rounded-xl p-3 bg-base-200"
