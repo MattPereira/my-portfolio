@@ -46,9 +46,9 @@ export function Experience() {
     <SectionContainer bgcolor="">
       <SectionHeader title="Experience" />
 
-      <div className="flex flex-col xl:flex-row lg:space-x-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {experiences.map(exp => (
-          <div key={exp.id} className="flex-1 mb-5 border border-base-content rounded-xl bg-base-200">
+          <div key={exp.id} className="flex-1 mb-5 border border-base-content rounded-xl bg-base-100 w-full">
             <div className="bg-white border-base-content border-b p-10 h-48 flex items-center justify-center rounded-xl overflow-hidden">
               <Image width={300} height={200} src={exp.image} alt={exp.title} />
             </div>

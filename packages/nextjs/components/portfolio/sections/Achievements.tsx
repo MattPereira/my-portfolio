@@ -5,25 +5,30 @@ import { SectionContainer, SectionHeader } from "~~/components/portfolio";
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export function Achievements() {
-  const { data: nfts, error: nftsError } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-nfts`, fetcher);
-  console.log("nfts", nfts);
+  const { data, error, isLoading } = useSWR(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get-nfts`, fetcher);
 
-  if (nftsError) {
-    console.error("nftsError", nftsError);
-    return (
-      <SectionContainer>
-        <SectionHeader title="Achievements" />
-        <div>Error loading achievement NFTs</div>
-      </SectionContainer>
-    );
-  }
+  // if (error) {
+  //   console.error("nftsError", error);
+  //   return (
+  //     <SectionContainer>
+  //       <SectionHeader title="Achievements" />
+  //       <div className="text-center">Error loading achievement NFTs</div>
+  //     </SectionContainer>
+  //   );
+  // }
 
   return (
     <SectionContainer>
       <SectionHeader title="Achievements" />
-      {nfts?.data ? (
+      {isLoading ? (
+        <div>
+          <div className="text-center">Fetching NFT acheivements...</div>
+        </div>
+      ) : error ? (
+        <div className="text-center">Error loading achievement NFTs</div>
+      ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 rounded-xl">
-          {nfts.data.map((nft: any, idx: number) => (
+          {data.data.map((nft: any, idx: number) => (
             <div
               key={idx}
               className="flex flex-col items-center justify-center border border-base-content rounded-xl p-3 bg-base-200"
@@ -32,10 +37,6 @@ export function Achievements() {
               <p className="text-xl">{nft.name}</p>
             </div>
           ))}
-        </div>
-      ) : (
-        <div>
-          <div className="text-center">Fetching NFT acheivements...</div>
         </div>
       )}
     </SectionContainer>
