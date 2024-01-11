@@ -16,7 +16,7 @@ const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT
 export const MetaHeader = ({
   title = "Matt Pereira's Portfolio",
   description = "Full Stack Web & Smart Contract Developer",
-  image = "thumbnail.svg",
+  image = "thumbnail.jpg",
   twitterCard = "summary_large_image",
   children,
 }: MetaHeaderProps) => {
