@@ -12,7 +12,6 @@ type ResponseData = WalletData[];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
   const { network } = req.query;
-  console.log("network", network);
 
   const config = {
     apiKey: process.env.ALCHEMY_API_KEY,
@@ -27,7 +26,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       return { name, balance };
     }),
   );
-  console.log(Network);
-  console.log("balances", balances);
+
   res.status(200).json(balances);
 }

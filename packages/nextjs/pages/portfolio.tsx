@@ -22,8 +22,6 @@ export const getServerSideProps: GetServerSideProps<{ wallets: WalletsData }> = 
     balanceMaps.push(new Map(balances.map((wallet: any) => [wallet.name, wallet.balance])));
   }
 
-  console.log("balanceMaps", balanceMaps);
-
   // Create wallets array with dynamic network keys
   const wallets = Array.from(balanceMaps[0].keys()).map(name => {
     const walletBalances = networks.reduce((acc, network, index) => {

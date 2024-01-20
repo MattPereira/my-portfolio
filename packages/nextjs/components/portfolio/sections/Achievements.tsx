@@ -19,14 +19,12 @@ export function Achievements() {
   return (
     <SectionContainer>
       <SectionHeader title="Achievements" />
-      {isLoading ? (
+      {isLoading || error ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
           {Array.from(Array(10).keys()).map((_, idx) => (
             <div key={idx} className="skeleton animate-pulse bg-base-100 rounded-xl w-full h-72"></div>
           ))}
         </div>
-      ) : error ? (
-        <div className="text-center">Error loading achievement NFTs</div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 rounded-xl">
           {nfts.map((nft: any, idx: number) => (

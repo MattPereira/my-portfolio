@@ -15,16 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const data = await response.json();
-    console.log("data", data.ownedNfts[0]);
     const nfts = data.ownedNfts;
-
-    // MAY BE CAUSING ERROR WITH SERVERLESS FUNCTION DEPLOYED TO VERCEL
-    // Process the data
-    // const nfts = data.ownedNfts.map((nft: any) => ({
-    //   image: nft.image?.originalUrl,
-    //   description: nft.description,
-    //   name: nft.name,
-    // }));
 
     res.status(200).json(nfts);
   } catch (error) {

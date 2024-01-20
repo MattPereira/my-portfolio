@@ -14,7 +14,6 @@ export const menuLinks: HeaderMenuLink[] = [
   { label: "Projects", href: "/#Projects" },
   { label: "Experience", href: "/#Experience" },
   { label: "Achievements", href: "/#Achievements" },
-  { label: "Skills", href: "/#Skills" },
   {
     label: "Resume",
     href: "https://docs.google.com/document/d/1H-5nsbQjDQPvQYtGq6Y91_NAwTxjicJEVXbtxtorsKI/edit?usp=sharing",
